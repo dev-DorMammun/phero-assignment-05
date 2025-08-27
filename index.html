@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Hotline</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: Inter;
+      }
+      .section {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (max-width: 1024px){
+        .section {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#f5fff6]">
+    <nav class="section flex justify-between flex-col items-center gap-3 md:flex-row md:mx-[60px] py-[20px] bg-white">
+      <div class="flex gap-3 items-center">
+        <img src="./assets/logo.png" width="50px" alt="" />
+        <div class="text-[#006747] font-bold text-[22px] leading-6 ">
+          Emergency Service
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div
+          class="bg-[#41FF6B1A] p-3 h-[52px] flex justify-center font-bold items-center gap-3 rounded-[50px] md:w-[123px]"
+        >
+          <span id="heartCount">0</span>
+          <img src="./assets/heart.png" width="30px" alt="" />
+        </div>
+        <div
+          class="bg-[#41FF6B1A] p-3 h-[52px] flex justify-center font-bold items-center gap-3 rounded-[50px] md:w-[123px]"
+        >
+          <span id="coinCount">100</span>
+          <img src="./assets/coin.png" width="30px" alt="" />
+        </div>
+        <div
+          class="bg-[#00A63E] p-3 h-[52px] flex justify-center font-semibold items-center gap-1 rounded-[50px] md:w-[123px] text-white"
+        >
+          <span id="copyCount">0</span>
+          Copy
+        </div>
+      </div>
+      </div>
+    </nav>
+    </body>
+    </html>
