@@ -96,7 +96,7 @@ for (let i = 0; i <= heartButtons.length - 1; i++) {
 function copyToClipBoard(id) {
   const text = document.getElementById(id).innerText;
 
-  // copied from ChatGPT as we aren't taught this yet...
+  // copied from AI as we aren't taught this yet...
 
   async function copyText() {
     try {
@@ -106,6 +106,7 @@ function copyToClipBoard(id) {
       console.error("Failed to copy:", err);
     }
   }
+
   copyText();
 
   select("copyCount").innerText = Number(select("copyCount").innerText) + 1;
