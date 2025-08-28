@@ -116,5 +116,3 @@ for (let element of list) {
     copyToClipBoard(`${element}Number`);
   });
 }
-
-console.log(select("emergencyText").innerText);
