@@ -24,6 +24,19 @@ function callBtnFunctionality(name, number) {
   }
 }
 
+const list = ["emergency", "ambulance", "abuse", "consumer", "child", "fire"];
+
+for (let element of list) {
+  select(`${element}Btn`).addEventListener("click", function () {
+    callBtnFunctionality(
+      select(`${element}Text`).innerText,
+      `${element}Number`
+    );
+  });
+}
+
+// add history functionality
+
 let array = [];
 
 function addHistory(name, number) {
@@ -49,40 +62,6 @@ function addHistory(name, number) {
     select("historyParent").innerHTML += array[i];
   }
 }
-const list = ["emergency", "ambulance", "abuse", "consumer", "child", "fire"];
-
-for (let element of list) {
-  select(`${element}Btn`).addEventListener("click", function () {
-    callBtnFunctionality(
-      select(`${element}Text`).innerText,
-      `${element}Number`
-    );
-  });
-}
-
-// select("emergencyBtn").addEventListener("click", function () {
-//   callBtnFunctionality(select("emergencyText").innerText, "emergencyNumber");
-// });
-
-// select("ambulanceBtn").addEventListener("click", function () {
-//   callBtnFunctionality("অ্যাম্বুলেন্স সহায়তা", "ambulanceNumber");
-// });
-
-// select("abuseBtn").addEventListener("click", function () {
-//   callBtnFunctionality("নারী নির্যাতন প্রতিরোধ", "abuseNumber");
-// });
-
-// select("consumerBtn").addEventListener("click", function () {
-//   callBtnFunctionality("ভোক্তা অধিকার সংরক্ষণ", "consumerNumber");
-// });
-
-// select("fireBtn").addEventListener("click", function () {
-//   callBtnFunctionality("ফায়ার সার্ভিস", "fireNumber");
-// });
-
-// select("childBtn").addEventListener("click", function () {
-//   callBtnFunctionality("শিশু সহায়তা", "childNumber");
-// });
 
 // clear button functionality
 
