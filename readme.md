@@ -9,10 +9,10 @@
 
 let's say we want to create and insert a child element in a parent element. the javascript code follows:
 
-const child = document.createElement('div');
-child.innerHTML = 'This is a child div';
-const parent = document.getElementById('parent');
-parent.appendChild(child);
+    const child = document.createElement('div');
+    child.innerHTML = 'This is a child div';
+    const parent = document.getElementById('parent');
+    parent.appendChild(child);
 
 ### 3. What is **Event Bubbling** and how does it work?
 
