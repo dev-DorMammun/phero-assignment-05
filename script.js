@@ -80,3 +80,24 @@ select("clearBtn").addEventListener("click", function () {
   select("historyParent").innerHTML = "";
   array = [];
 });
+
+// heart react functionality
+
+const heartButtons = document.getElementsByClassName("heartButtons");
+let value = [0, 0, 0, 0, 0, 0];
+
+for (let i = 0; i <= heartButtons.length - 1; i++) {
+  heartButtons[i].addEventListener("click", function (event) {
+    if (value[i] === 0) {
+      value[i] = 1;
+      select("heartCount").innerText =
+        Number(select("heartCount").innerText) + 1;
+      event.target.src = "./assets/heartFilled.png";
+    } else {
+      value[i] = 0;
+      select("heartCount").innerText =
+        Number(select("heartCount").innerText) - 1;
+      event.target.src = "./assets/heart_logo.png";
+    }
+  });
+}
