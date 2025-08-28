@@ -49,30 +49,40 @@ function addHistory(name, number) {
     select("historyParent").innerHTML += array[i];
   }
 }
+const list = ["emergency", "ambulance", "abuse", "consumer", "child", "fire"];
 
-select("emergencyBtn").addEventListener("click", function () {
-  callBtnFunctionality("জাতীয় জরুরি সেবা", "emergencyNumber");
-});
+for (let element of list) {
+  select(`${element}Btn`).addEventListener("click", function () {
+    callBtnFunctionality(
+      select(`${element}Text`).innerText,
+      `${element}Number`
+    );
+  });
+}
 
-select("ambulanceBtn").addEventListener("click", function () {
-  callBtnFunctionality("অ্যাম্বুলেন্স সহায়তা", "ambulanceNumber");
-});
+// select("emergencyBtn").addEventListener("click", function () {
+//   callBtnFunctionality(select("emergencyText").innerText, "emergencyNumber");
+// });
 
-select("abuseBtn").addEventListener("click", function () {
-  callBtnFunctionality("নারী নির্যাতন প্রতিরোধ", "abuseNumber");
-});
+// select("ambulanceBtn").addEventListener("click", function () {
+//   callBtnFunctionality("অ্যাম্বুলেন্স সহায়তা", "ambulanceNumber");
+// });
 
-select("consumerBtn").addEventListener("click", function () {
-  callBtnFunctionality("ভোক্তা অধিকার সংরক্ষণ", "consumerNumber");
-});
+// select("abuseBtn").addEventListener("click", function () {
+//   callBtnFunctionality("নারী নির্যাতন প্রতিরোধ", "abuseNumber");
+// });
 
-select("fireBtn").addEventListener("click", function () {
-  callBtnFunctionality("ফায়ার সার্ভিস", "fireNumber");
-});
+// select("consumerBtn").addEventListener("click", function () {
+//   callBtnFunctionality("ভোক্তা অধিকার সংরক্ষণ", "consumerNumber");
+// });
 
-select("childBtn").addEventListener("click", function () {
-  callBtnFunctionality("শিশু সহায়তা", "childNumber");
-});
+// select("fireBtn").addEventListener("click", function () {
+//   callBtnFunctionality("ফায়ার সার্ভিস", "fireNumber");
+// });
+
+// select("childBtn").addEventListener("click", function () {
+//   callBtnFunctionality("শিশু সহায়তা", "childNumber");
+// });
 
 // clear button functionality
 
@@ -107,6 +117,8 @@ for (let i = 0; i <= heartButtons.length - 1; i++) {
 function copyToClipBoard(id) {
   const text = document.getElementById(id).innerText;
 
+  // copied from ChatGPT as we aren't taught this yet...
+
   async function copyText() {
     try {
       await navigator.clipboard.writeText(text);
@@ -120,26 +132,10 @@ function copyToClipBoard(id) {
   select("copyCount").innerText = Number(select("copyCount").innerText) + 1;
 }
 
-select("emergencyCopy").addEventListener("click", function () {
-  copyToClipBoard("emergencyNumber");
-});
+for (let element of list) {
+  select(`${element}Copy`).addEventListener("click", function () {
+    copyToClipBoard(`${element}Number`);
+  });
+}
 
-select("ambulanceCopy").addEventListener("click", function () {
-  copyToClipBoard("ambulanceNumber");
-});
-
-select("abuseCopy").addEventListener("click", function () {
-  copyToClipBoard("abuseNumber");
-});
-
-select("fireCopy").addEventListener("click", function () {
-  copyToClipBoard("fireNumber");
-});
-
-select("childCopy").addEventListener("click", function () {
-  copyToClipBoard("childNumber");
-});
-
-select("consumerCopy").addEventListener("click", function () {
-  copyToClipBoard("consumerNumber");
-});
+console.log(select("emergencyText").innerText);
