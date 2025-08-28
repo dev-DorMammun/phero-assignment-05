@@ -78,7 +78,8 @@
         </div>
     </section>
 
-    <section class="section grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-[30px] pt-[70px]">
+    <section class="section grid grid-cols-1 lg:grid-cols-[2.5fr_1fr] gap-[30px] pt-[70px]">
+
       <div class=" grid grid-cols-1 gap-[30px] md:grid-cols-3">
         <div class="bg-white p-[32px] rounded-[12px] flex flex-col gap-[24px] shadow-sm ">
           <div class="flex justify-between items-center">
@@ -291,7 +292,24 @@
         
       </div>
      
-      
+      <div class="p-6 rounded-[12px] shadow-sm bg-white">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex gap-2 items-center font-semibold text-[20px]">
+            <img src="./assets/history.png" width="24px" alt="">
+            <span class="secondaryColor">Call History</span>
+          </div>
+          <button id="clearBtn"
+          class="bg-[#00A63E] px-[16px] py-[12px] md:px-[36px] font-semibold items-center gap-1 rounded-[50px] text-white cursor-pointer"
+        >
+          Clear
+        </button>
+        </div>
+        <div id="historyParent">
+
+        </div>
+        
+      </div>
+
     </section>
 
     <script src="./script.js"></script>
