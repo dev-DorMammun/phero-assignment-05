@@ -38,6 +38,7 @@ If the positioning of an element looks like this:
                         console.log(`${element} clicked`);
                     });
                 }
+            </script>
         </body>
     </html>
 
