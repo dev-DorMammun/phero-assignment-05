@@ -73,3 +73,10 @@ select("fireBtn").addEventListener("click", function () {
 select("childBtn").addEventListener("click", function () {
   callBtnFunctionality("শিশু সহায়তা", 1098);
 });
+
+// clear button functionality
+
+select("clearBtn").addEventListener("click", function () {
+  select("historyParent").innerHTML = "";
+  array = [];
+});
