@@ -51,3 +51,14 @@ if we click on item-2, it will console:
 because item2 is inside ul, and then ul is inside body. This way, it tracks item-2 to the top of the document tree.
 
 ### **4. What is Event Delegation in JavaScript? Why is it useful?**
+
+Event Delegation is technique of attaching one event listener on a parent instead of many on children.
+
+On the previous example, instead of attaching event listener in every item the ul contains, we can simply attach an event listener to the parent ul.
+
+This technique is used to boost performance as it has to read and execute less amount of code.
+
+### **5. What is the difference between preventDefault() and stopPropagation() methods?**
+
+- **preventDefault()** : This method prevents the default behaviour of an element in the document and **DOES NOT** stop event bubbling.
+- **stopPropagation()** : This method stops event bubbling at the very element it is triggered. The event only occurs at the element it is triggered, it doesn't propagate to the roots of that element. It also allows the default behaviour of an element, unlike preventDefault() method.
